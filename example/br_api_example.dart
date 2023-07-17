@@ -1,7 +1,6 @@
-import 'dart:developer';
 import 'package:br_api/br_api.dart';
 
 void main() async {
-  final bank = await Bank.searchBankInformation(bankCode: 82);
-  log(bank.fullName!);
+  final cepV1 = await CepV1.searchCepV1(cep: 17512151);
+  print(cepV1.city);
 }

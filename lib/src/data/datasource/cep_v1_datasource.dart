@@ -1,6 +1,6 @@
 part of 'br_api_datasource.dart';
 
-/// Informações referentes a CEPs.
+/// Informações referentes a CEPs (Versão 1).
 extension CepV1Datasource on BrApiDatasource {
   /// Busca por CEP com múltiplos providers de fallback.
   Future<({String body, int statusCode})> searchCepV1({
