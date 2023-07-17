@@ -31,19 +31,12 @@ class CepV1 {
     );
   }
 
-  // ignore: public_member_api_docs
   final String? cep;
-  // ignore: public_member_api_docs
   final String? state;
-  // ignore: public_member_api_docs
   final String? city;
-  // ignore: public_member_api_docs
   final String? neighborhood;
-  // ignore: public_member_api_docs
   final String? street;
-  // ignore: public_member_api_docs
   final String? service;
-  // ignore: public_member_api_docs
   final Map<String, dynamic>? errors;
 
   static final _brApiRepository = BrApiRepository();

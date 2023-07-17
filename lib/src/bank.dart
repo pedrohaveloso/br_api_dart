@@ -25,15 +25,10 @@ class Bank {
     );
   }
 
-  // ignore: public_member_api_docs
   final String? ispb;
-  // ignore: public_member_api_docs
   final String? name;
-  // ignore: public_member_api_docs
   final int? code;
-  // ignore: public_member_api_docs
   final String? fullName;
-  // ignore: public_member_api_docs
   final Map<String, dynamic>? errors;
 
   static final _brApiRepository = BrApiRepository();
