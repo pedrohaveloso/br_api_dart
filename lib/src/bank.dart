@@ -2,7 +2,7 @@ import 'package:br_api/src/data/repository/br_api_repository.dart';
 
 /// Informações sobre sistema bancário.
 class Bank {
-  /// Informações disponíveis:
+  /// Informações disponíveis.
   Bank({
     required this.ispb,
     required this.name,

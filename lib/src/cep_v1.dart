@@ -2,7 +2,7 @@ import 'package:br_api/src/data/repository/br_api_repository.dart';
 
 /// Informações referentes a CEPs (Versão 1).
 class CepV1 {
-  /// Informações disponíveis:
+  /// Informações disponíveis.
   CepV1({
     required this.cep,
     required this.state,
