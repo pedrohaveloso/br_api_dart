@@ -14,10 +14,10 @@ class Bank {
   /// Obter os dados por um json.
   factory Bank.fromJson(Map<String, dynamic> json) {
     return Bank(
-      ispb: json['ispb'] as String?,
-      name: json['name'] as String?,
+      ispb: json['ispb'].toString(),
+      name: json['name'].toString(),
       code: json['code'] as int?,
-      fullName: json['fullName'] as String?,
+      fullName: json['fullName'].toString(),
       errors: {
         'message': json['message'],
         'type': json['type'],

@@ -16,12 +16,12 @@ class CepV1 {
   /// Obter os dados por um json.
   factory CepV1.fromJson(Map<String, dynamic> json) {
     return CepV1(
-      cep: json['cep'] as String?,
-      state: json['state'] as String?,
-      city: json['city'] as String?,
-      neighborhood: json['neighborhood'] as String?,
-      street: json['street'] as String?,
-      service: json['service'] as String?,
+      cep: json['cep'].toString(),
+      state: json['state'].toString(),
+      city: json['city'].toString(),
+      neighborhood: json['neighborhood'].toString(),
+      street: json['street'].toString(),
+      service: json['service'].toString(),
       errors: {
         'name': json['name'],
         'message': json['message'],
