@@ -6,3 +6,4 @@ library br_api;
 
 export 'src/bank.dart';
 export 'src/cep_v1.dart';
+export 'src/cep_v2.dart';
