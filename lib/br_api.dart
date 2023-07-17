@@ -1,6 +1,7 @@
-/// Support for doing something awesome.
+/// Biblioteca baseada na [Brasil API](https://brasilapi.com.br), com classes
+/// para uso das funcionalidades de todas suas funcionalidades.
 ///
-/// More dartdocs go here.
+/// Por favor, leia os termos de uso da API.
 library br_api;
 
-export 'src/br_api.dart';
+export 'src/bank.dart';

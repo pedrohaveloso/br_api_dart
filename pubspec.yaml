@@ -1,16 +1,15 @@
 name: br_api
 description: A starting point for Dart libraries or applications.
 version: 1.0.0
-# repository: https://github.com/my_org/my_repo
+repository: https://github.com/PedroHAVeloso/br_api_dart
 
 environment:
   sdk: ^3.0.6
 
-# Add regular dependencies here.
 dependencies:
-  # path: ^1.8.0
   http: ^1.1.0
 
 dev_dependencies:
   lints: ^2.1.1
   test: ^1.24.4
+  very_good_analysis: ^5.0.0+1

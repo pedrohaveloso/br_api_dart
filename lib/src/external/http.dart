@@ -1,4 +1,4 @@
-/// Dependência http: ^1.1.0
+// Dependência http: ^1.1.0
 import 'package:http/http.dart' as http;
 
 /// Classe para comunicações HTTP.
@@ -12,8 +12,8 @@ class Http {
   ///
   /// Pode ser usada como abaixo:
   /// ```dart
-  /// final (:body, :statusCode) = await Http.get(url: "https://pub.dev/");
-  /// print("$body $statusCode");
+  /// final (:body, :statusCode) = await Http.get(url: 'https://pub.dev/');
+  /// print('$body $statusCode');
   /// ```
   static Future<({String body, int statusCode})> get({
     required String url,
