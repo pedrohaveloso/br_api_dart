@@ -1,5 +1,5 @@
 /// Dependência encapsulada para as requisições HTTP
-import 'package:br_api/external/http.dart';
+import 'package:br_api/src/external/http.dart';
 
 part 'bank_datasource.dart';
 
