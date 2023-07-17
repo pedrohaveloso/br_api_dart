@@ -1,0 +1,76 @@
+cnpj	
+string
+identificador_matriz_filial	
+integer <int32>
+descricao_matriz_filial	
+string
+razao_social	
+string
+nome_fantasia	
+string
+situacao_cadastral	
+integer <int32>
+descricao_situacao_cadastral	
+string
+data_situacao_cadastral	
+string <date>
+motivo_situacao_cadastral	
+integer <int32>
+nome_cidade_exterior	
+string <nullable>
+codigo_natureza_juridica	
+integer <int32>
+data_inicio_atividade	
+string <date>
+cnae_fiscal	
+integer <int32>
+cnae_fiscal_descricao	
+string
+descricao_tipo_logradouro	
+string
+logradouro	
+string
+numero	
+string
+complemento	
+string
+bairro	
+string
+cep	
+integer <int32>
+uf	
+string
+codigo_municipio	
+integer <int32>
+municipio	
+string
+ddd_telefone_1	
+string
+ddd_telefone_2	
+string <nullable>
+ddd_fax	
+string <nullable>
+qualificacao_do_responsavel	
+integer <int32>
+capital_social	
+integer <int32>
+porte	
+integer <int32>
+descricao_porte	
+string
+opcao_pelo_simples	
+boolean
+data_opcao_pelo_simples	
+string <nullable>
+data_exclusao_do_simples	
+string <nullable>
+opcao_pelo_mei	
+boolean
+situacao_especial	
+string <nullable>
+data_situacao_especial	
+string <nullable>
+cnaes_secundarios	
+Array of objects
+qsa	
+Array of objects
