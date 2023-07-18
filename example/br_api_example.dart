@@ -8,10 +8,13 @@ void main() async {
   print(cepV2.city);
 
   final cnpj = await Cnpj.searchCnpj(cnpj: '06947283000160');
-  print(cnpj.porte);
+  print(cnpj.cnaeFiscalDescricao);
 
   final corretora = await Corretora.searchCorretoraInformation(
     cnpj: '33764366000196',
   );
-  print(corretora.cep);
+  print(corretora.dataInicioSituacao);
+
+  final cptec = await Cptec.airportConditions(icaoCode: 'SBBR');
+  print(cptec.condicaoDesc);
 }
