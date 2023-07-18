@@ -4,6 +4,7 @@ part 'bank_datasource.dart';
 part 'cep_v1_datasource.dart';
 part 'cep_v2_datasource.dart';
 part 'cnpj_datasource.dart';
+part 'corretora_datasource.dart';
 
 /// Realiza a comunicação com a [Brasil API](https://brasilapi.com.br).
 class BrApiDatasource {
@@ -11,4 +12,5 @@ class BrApiDatasource {
   final _cepV1Url = 'https://brasilapi.com.br/api/cep/v1';
   final _cepV2Url = 'https://brasilapi.com.br/api/cep/v2';
   final _cnpjUrl = 'https://brasilapi.com.br/api/cnpj/v1';
+  final _corretoraUrl = 'https://brasilapi.com.br/api/cvm/corretoras/v1';
 }
