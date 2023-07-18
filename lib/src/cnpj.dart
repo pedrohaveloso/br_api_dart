@@ -49,42 +49,43 @@ class Cnpj {
   factory Cnpj.fromJson(Map<String, dynamic> json) {
     return Cnpj(
       cnpj: json['cnpj'].toString(),
-      identificadorMatrizFilial: json['identificadorMatrizFilial'] as int?,
-      descricaoMatrizFilial: json['descricaoMatrizFilial'].toString(),
-      razaoSocial: json['razaoSocial'].toString(),
-      nomeFantasia: json['nomeFantasia'].toString(),
-      situacaoCadastral: json['situacaoCadastral'] as int?,
-      descricaoSituacaoCadastral: json['descricaoSituacaoCadastral'].toString(),
-      dataSituacaoCadastral: json['dataSituacaoCadastral'].toString(),
-      motivoSituacaoCadastral: json['motivoSituacaoCadastral'] as int?,
-      nomeCidadeExterior: json['nomeCidadeExterior'].toString(),
-      codigoNaturezaJuridica: json['codigoNaturezaJuridica'] as int?,
-      dataInicioAtividade: json['dataInicioAtividade'].toString(),
-      cnaeFiscal: json['cnaeFiscal'] as int?,
-      cnaeFiscalDescricao: json['cnaeFiscalDescricao'].toString(),
-      descricaoTipoLogradouro: json['descricaoTipoLogradouro'].toString(),
+      identificadorMatrizFilial: json['identificador_matriz_filial'] as int?,
+      descricaoMatrizFilial: json['descricao_matriz_filial'].toString(),
+      razaoSocial: json['razao_social'].toString(),
+      nomeFantasia: json['nome_fantasia'].toString(),
+      situacaoCadastral: json['situacao_cadastral'] as int?,
+      descricaoSituacaoCadastral:
+          json['descricao_situacao_cadastral'].toString(),
+      dataSituacaoCadastral: json['data_situacao_cadastral'].toString(),
+      motivoSituacaoCadastral: json['motivo_situacao_cadastral'] as int?,
+      nomeCidadeExterior: json['nome_cidade_exterior'].toString(),
+      codigoNaturezaJuridica: json['codigo_natureza_juridica'] as int?,
+      dataInicioAtividade: json['data_inicio_atividade'].toString(),
+      cnaeFiscal: json['cnae_fiscal'] as int?,
+      cnaeFiscalDescricao: json['cnae_fiscal_descricao'].toString(),
+      descricaoTipoLogradouro: json['descricao_tipo_logradouro'].toString(),
       logradouro: json['logradouro'].toString(),
       numero: json['numero'].toString(),
       complemento: json['complemento'].toString(),
       bairro: json['bairro'].toString(),
       cep: json['cep'].toString(),
       uf: json['uf'].toString(),
-      codigoMunicipio: json['codigoMunicipio'] as int?,
+      codigoMunicipio: json['codigo_municipio'] as int?,
       municipio: json['municipio'].toString(),
-      dddTelefone1: json['dddTelefone1'].toString(),
-      dddTelefone2: json['dddTelefone2'].toString(),
-      dddFax: json['dddFax'].toString(),
-      qualificacaoDoResponsavel: json['qualificacaoDoResponsavel'] as int?,
-      capitalSocial: json['capitalSocial'] as int?,
+      dddTelefone1: json['ddd_telefone_1'].toString(),
+      dddTelefone2: json['ddd_telefone_2'].toString(),
+      dddFax: json['ddd_fax'].toString(),
+      qualificacaoDoResponsavel: json['qualificacao_do_responsavel'] as int?,
+      capitalSocial: json['capital_social'] as int?,
       porte: json['porte'].toString(),
-      descricaoPorte: json['descricaoPorte'].toString(),
-      opcaoPeloSimples: json['opcaoPeloSimples'] as bool?,
-      dataOpcaoPeloSimples: json['dataOpcaoPeloSimples'].toString(),
-      dataExclusaoDoSimples: json['dataExclusaoDoSimples'].toString(),
-      opcaoPeloMei: json['opcaoPeloMei'] as bool?,
-      situacaoEspecial: json['situacaoEspecial'].toString(),
-      dataSituacaoEspecial: json['dataSituacaoEspecial'].toString(),
-      cnaesSecundarios: json['cnaesSecundarios'] as List?,
+      descricaoPorte: json['descricao_porte'].toString(),
+      opcaoPeloSimples: json['opcao_pelo_simples'] as bool?,
+      dataOpcaoPeloSimples: json['data_opcao_pelo_simples'].toString(),
+      dataExclusaoDoSimples: json['data_exclusao_do_simples'].toString(),
+      opcaoPeloMei: json['opcao_pelo_mei'] as bool?,
+      situacaoEspecial: json['situacao_especial'].toString(),
+      dataSituacaoEspecial: json['data_situacao_especial'].toString(),
+      cnaesSecundarios: json['cnaes_secundarios'] as List?,
       qsa: json['qsa'] as List?,
       errors: {
         'name': json['name'],
@@ -225,42 +226,42 @@ class Cnpj {
   Map<String, dynamic> toJson() {
     final data = <String, dynamic>{};
     data['cnpj'] = cnpj;
-    data['identificadorMatrizFilial'] = identificadorMatrizFilial;
-    data['descricaoMatrizFilial'] = descricaoMatrizFilial;
-    data['razaoSocial'] = razaoSocial;
-    data['nomeFantasia'] = nomeFantasia;
-    data['situacaoCadastral'] = situacaoCadastral;
-    data['descricaoSituacaoCadastral'] = descricaoSituacaoCadastral;
-    data['dataSituacaoCadastral'] = dataSituacaoCadastral;
-    data['motivoSituacaoCadastral'] = motivoSituacaoCadastral;
-    data['nomeCidadeExterior'] = nomeCidadeExterior;
-    data['codigoNaturezaJuridica'] = codigoNaturezaJuridica;
-    data['dataInicioAtividade'] = dataInicioAtividade;
-    data['cnaeFiscal'] = cnaeFiscal;
-    data['cnaeFiscalDescricao'] = cnaeFiscalDescricao;
-    data['descricaoTipoLogradouro'] = descricaoTipoLogradouro;
+    data['identificador_matriz_filial'] = identificadorMatrizFilial;
+    data['descricao_matriz_filial'] = descricaoMatrizFilial;
+    data['razao_social'] = razaoSocial;
+    data['nome_fantasia'] = nomeFantasia;
+    data['situacao_cadastral'] = situacaoCadastral;
+    data['descricao_situacao_cadastral'] = descricaoSituacaoCadastral;
+    data['data_situacao_cadastral'] = dataSituacaoCadastral;
+    data['motivo_situacao_cadastral'] = motivoSituacaoCadastral;
+    data['nome_cidade_exterior'] = nomeCidadeExterior;
+    data['codigo_natureza_juridica'] = codigoNaturezaJuridica;
+    data['data_inicio_atividade'] = dataInicioAtividade;
+    data['cnae_fiscal'] = cnaeFiscal;
+    data['cnae_fiscal_descricao'] = cnaeFiscalDescricao;
+    data['descricao_tipo_logradouro'] = descricaoTipoLogradouro;
     data['logradouro'] = logradouro;
     data['numero'] = numero;
     data['complemento'] = complemento;
     data['bairro'] = bairro;
     data['cep'] = cep;
     data['uf'] = uf;
-    data['codigoMunicipio'] = codigoMunicipio;
+    data['codigo_municipio'] = codigoMunicipio;
     data['municipio'] = municipio;
-    data['dddTelefone1'] = dddTelefone1;
-    data['dddTelefone2'] = dddTelefone2;
-    data['dddFax'] = dddFax;
-    data['qualificacaoDoResponsavel'] = qualificacaoDoResponsavel;
-    data['capitalSocial'] = capitalSocial;
+    data['ddd_telefone_1'] = dddTelefone1;
+    data['ddd_telefone_2'] = dddTelefone2;
+    data['ddd_fax'] = dddFax;
+    data['qualificacao_do_responsavel'] = qualificacaoDoResponsavel;
+    data['capital_social'] = capitalSocial;
     data['porte'] = porte;
-    data['descricaoPorte'] = descricaoPorte;
-    data['opcaoPeloSimples'] = opcaoPeloSimples;
-    data['dataOpcaoPeloSimples'] = dataOpcaoPeloSimples;
-    data['dataExclusaoDoSimples'] = dataExclusaoDoSimples;
-    data['opcaoPeloMei'] = opcaoPeloMei;
-    data['situacaoEspecial'] = situacaoEspecial;
-    data['dataSituacaoEspecial'] = dataSituacaoEspecial;
-    data['cnaesSecundarios'] = cnaesSecundarios;
+    data['descricao_porte'] = descricaoPorte;
+    data['opcao_pelo_simples'] = opcaoPeloSimples;
+    data['data_opcao_pelo_simples'] = dataOpcaoPeloSimples;
+    data['data_exclusao_do_simples'] = dataExclusaoDoSimples;
+    data['opcao_pelo_mei'] = opcaoPeloMei;
+    data['situacao_especial'] = situacaoEspecial;
+    data['data_situacao_especial'] = dataSituacaoEspecial;
+    data['cnaes_secundarios'] = cnaesSecundarios;
     data['qsa'] = qsa;
     return data;
   }

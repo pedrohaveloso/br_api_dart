@@ -11,7 +11,7 @@ class Corretora {
     this.cep,
     this.codigoCvm,
     this.complemento,
-    this.dataInicioAtuacao,
+    this.dataInicioSituacao,
     this.dataPatrimonioLiquido,
     this.dataRegistro,
     this.email,
@@ -28,22 +28,22 @@ class Corretora {
   factory Corretora.fromJson(Map<String, dynamic> json) {
     return Corretora(
       cnpj: json['cnpj'].toString(),
-      nomeSocial: json['nomeSocial'].toString(),
-      nomeComercial: json['nomeComercial'].toString(),
+      nomeSocial: json['nome_social'].toString(),
+      nomeComercial: json['nome_comercial'].toString(),
       bairro: json['bairro'].toString(),
       cep: json['cep'].toString(),
-      codigoCvm: json['codigoCvm'].toString(),
+      codigoCvm: json['codigo_cvm'].toString(),
       complemento: json['complemento'].toString(),
-      dataInicioAtuacao: json['dataInicioAtuacao'].toString(),
-      dataPatrimonioLiquido: json['dataPatrimonioLiquido'].toString(),
-      dataRegistro: json['dataRegistro'].toString(),
+      dataInicioSituacao: json['data_inicio_situacao'].toString(),
+      dataPatrimonioLiquido: json['data_patrimonio_liquido'].toString(),
+      dataRegistro: json['data_registro'].toString(),
       email: json['email'].toString(),
       logradouro: json['logradouro'].toString(),
       municipio: json['municipio'].toString(),
       pais: json['pais'].toString(),
       telefone: json['telefone'].toString(),
       uf: json['uf'].toString(),
-      valorPatrimonioLiquido: json['valorPatrimonioLiquido'].toString(),
+      valorPatrimonioLiquido: json['valor_patrimonio_liquido'].toString(),
       errors: {
         'name': json['name'],
         'message': json['message'],
@@ -73,8 +73,8 @@ class Corretora {
   /// Complementos.
   final String? complemento;
 
-  /// Data de início de atuação da corretora.
-  final String? dataInicioAtuacao;
+  /// Data de início situação da corretora.
+  final String? dataInicioSituacao;
 
   /// Data de declaração do patrimônio líquido.
   final String? dataPatrimonioLiquido;
@@ -112,22 +112,22 @@ class Corretora {
   Map<String, dynamic> toJson() {
     final data = <String, dynamic>{};
     data['cnpj'] = cnpj;
-    data['nomeSocial'] = nomeSocial;
-    data['nomeComercial'] = nomeComercial;
+    data['nome_social'] = nomeSocial;
+    data['nome_comercial'] = nomeComercial;
     data['bairro'] = bairro;
     data['cep'] = cep;
-    data['codigoCvm'] = codigoCvm;
+    data['codigo_cvm'] = codigoCvm;
     data['complemento'] = complemento;
-    data['dataInicioAtuacao'] = dataInicioAtuacao;
-    data['dataPatrimonioLiquido'] = dataPatrimonioLiquido;
-    data['dataRegistro'] = dataRegistro;
+    data['data_inicio_situacao'] = dataInicioSituacao;
+    data['data_patrimonio_liquido'] = dataPatrimonioLiquido;
+    data['data_registro'] = dataRegistro;
     data['email'] = email;
     data['logradouro'] = logradouro;
     data['municipio'] = municipio;
     data['pais'] = pais;
     data['telefone'] = telefone;
     data['uf'] = uf;
-    data['valorPatrimonioLiquido'] = valorPatrimonioLiquido;
+    data['valor_patrimonio_liquido'] = valorPatrimonioLiquido;
     return data;
   }
 
