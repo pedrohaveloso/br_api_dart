@@ -1,6 +1,4 @@
 import 'package:br_api/br_api.dart';
-import 'package:br_api/src/cnpj.dart';
-import 'package:br_api/src/corretora.dart';
 
 void main() async {
   final cepV1 = await CepV1.searchCepV1(cep: 17512151);
