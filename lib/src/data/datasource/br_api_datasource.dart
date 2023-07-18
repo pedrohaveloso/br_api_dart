@@ -7,6 +7,7 @@ part 'cnpj_datasource.dart';
 part 'corretora_datasource.dart';
 part 'cptec_datasource.dart';
 part 'ddd_datasource.dart';
+part 'feriado_datasource.dart';
 
 /// Realiza a comunicação com a [Brasil API](https://brasilapi.com.br).
 class BrApiDatasource {
@@ -23,4 +24,5 @@ class BrApiDatasource {
     ocean: 'https://brasilapi.com.br/api/cptec/v1/ondas',
   );
   final _dddUrl = 'https://brasilapi.com.br/api/ddd/v1';
+  final _feriadosUrl = 'https://brasilapi.com.br/api/feriados/v1';
 }

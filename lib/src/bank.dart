@@ -17,7 +17,7 @@ class Bank {
       ispb: json['ispb'].toString(),
       name: json['name'].toString(),
       code: json['code'] as int?,
-      fullName: json['fullName'].toString(),
+      fullName: json['full_name'].toString(),
       errors: {
         'message': json['message'],
         'type': json['type'],
@@ -48,7 +48,7 @@ class Bank {
     data['ispb'] = ispb;
     data['name'] = name;
     data['code'] = code;
-    data['fullName'] = fullName;
+    data['full_name'] = fullName;
     return data;
   }
 

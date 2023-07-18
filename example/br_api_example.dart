@@ -20,4 +20,7 @@ void main() async {
 
   final ddd = await Ddd.stateAndCities(ddd: 11);
   print(ddd.cities);
+
+  final feriados = await Feriado.listFeriados(year: 2023);
+  print(feriados[2].name);
 }

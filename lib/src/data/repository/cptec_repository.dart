@@ -13,8 +13,8 @@ extension CptecRepository on BrApiRepository {
 
     return bodyList
         .map(
-          (corretora) => Cptec.fromJson(
-            corretora as Map<String, dynamic>,
+          (cptec) => Cptec.fromJson(
+            cptec as Map<String, dynamic>,
           ),
         )
         .toList();
@@ -34,8 +34,8 @@ extension CptecRepository on BrApiRepository {
 
     return bodyList
         .map(
-          (corretora) => Cptec.fromJson(
-            corretora as Map<String, dynamic>,
+          (cptec) => Cptec.fromJson(
+            cptec as Map<String, dynamic>,
           ),
         )
         .toList();
@@ -50,8 +50,8 @@ extension CptecRepository on BrApiRepository {
 
     return bodyList
         .map(
-          (corretora) => Cptec.fromJson(
-            corretora as Map<String, dynamic>,
+          (cptec) => Cptec.fromJson(
+            cptec as Map<String, dynamic>,
           ),
         )
         .toList();
