@@ -10,3 +10,4 @@ export 'src/cep_v2.dart';
 export 'src/cnpj.dart';
 export 'src/corretora.dart';
 export 'src/cptec.dart';
+export 'src/ddd.dart';

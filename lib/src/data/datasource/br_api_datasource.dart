@@ -6,6 +6,7 @@ part 'cep_v2_datasource.dart';
 part 'cnpj_datasource.dart';
 part 'corretora_datasource.dart';
 part 'cptec_datasource.dart';
+part 'ddd_datasource.dart';
 
 /// Realiza a comunicação com a [Brasil API](https://brasilapi.com.br).
 class BrApiDatasource {
@@ -21,4 +22,5 @@ class BrApiDatasource {
     forecast: 'https://brasilapi.com.br/api/cptec/v1/clima/previsao',
     ocean: 'https://brasilapi.com.br/api/cptec/v1/ondas',
   );
+  final _dddUrl = 'https://brasilapi.com.br/api/ddd/v1';
 }

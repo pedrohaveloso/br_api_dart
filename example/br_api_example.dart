@@ -17,4 +17,7 @@ void main() async {
 
   final cptec = await Cptec.airportConditions(icaoCode: 'SBBR');
   print(cptec.condicaoDesc);
+
+  final ddd = await Ddd.stateAndCities(ddd: 11);
+  print(ddd.cities);
 }
