@@ -4,20 +4,20 @@ import 'package:br_api/src/data/repository/br_api_repository.dart';
 class Bank {
   /// Informações disponíveis.
   Bank({
-    required this.ispb,
-    required this.name,
-    required this.code,
-    required this.fullName,
-    required this.errors,
+    this.ispb,
+    this.name,
+    this.code,
+    this.fullName,
+    this.errors,
   });
 
   /// Obter os dados por um json.
   factory Bank.fromJson(Map<String, dynamic> json) {
     return Bank(
-      ispb: json['ispb'] as String?,
-      name: json['name'] as String?,
+      ispb: json['ispb'].toString(),
+      name: json['name'].toString(),
       code: json['code'] as int?,
-      fullName: json['fullName'] as String?,
+      fullName: json['fullName'].toString(),
       errors: {
         'message': json['message'],
         'type': json['type'],
@@ -25,10 +25,19 @@ class Bank {
     );
   }
 
+  /// IPSB do banco.
   final String? ispb;
+
+  /// Nome do banco.
   final String? name;
+
+  /// Código do banco.
   final int? code;
+
+  /// Nome completo do banco.
   final String? fullName;
+
+  /// Erros encontrados na requisição.
   final Map<String, dynamic>? errors;
 
   static final _brApiRepository = BrApiRepository();

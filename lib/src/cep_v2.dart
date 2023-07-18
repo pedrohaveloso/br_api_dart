@@ -4,25 +4,25 @@ import 'package:br_api/src/data/repository/br_api_repository.dart';
 class CepV2 {
   /// Informações disponíveis.
   CepV2({
-    required this.cep,
-    required this.state,
-    required this.city,
-    required this.neighborhood,
-    required this.street,
-    required this.service,
-    required this.location,
-    required this.errors,
+    this.cep,
+    this.state,
+    this.city,
+    this.neighborhood,
+    this.street,
+    this.service,
+    this.location,
+    this.errors,
   });
 
   /// Obter os dados por um json.
   factory CepV2.fromJson(Map<String, dynamic> json) {
     return CepV2(
-      cep: json['cep'] as String?,
-      state: json['state'] as String?,
-      city: json['city'] as String?,
-      neighborhood: json['neighborhood'] as String?,
-      street: json['street'] as String?,
-      service: json['service'] as String?,
+      cep: json['cep'].toString(),
+      state: json['state'].toString(),
+      city: json['city'].toString(),
+      neighborhood: json['neighborhood'].toString(),
+      street: json['street'].toString(),
+      service: json['service'].toString(),
       location: json['location'],
       errors: {
         'name': json['name'],
@@ -33,13 +33,28 @@ class CepV2 {
     );
   }
 
+  /// CEP do local.
   final String? cep;
+
+  /// Estado.
   final String? state;
+
+  /// Cidade.
   final String? city;
+
+  /// Bairro.
   final String? neighborhood;
+
+  /// Rua.
   final String? street;
+
+  /// Responsável pelo serviço local.
   final String? service;
+
+  /// Localização.
   final dynamic location;
+
+  /// Erros encontrados na requisição.
   final Map<String, dynamic>? errors;
 
   static final _brApiRepository = BrApiRepository();
