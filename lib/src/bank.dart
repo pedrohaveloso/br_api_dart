@@ -4,11 +4,11 @@ import 'package:br_api/src/data/repository/br_api_repository.dart';
 class Bank {
   /// Informações disponíveis.
   Bank({
-    required this.ispb,
-    required this.name,
-    required this.code,
-    required this.fullName,
-    required this.errors,
+    this.ispb,
+    this.name,
+    this.code,
+    this.fullName,
+    this.errors,
   });
 
   /// Obter os dados por um json.

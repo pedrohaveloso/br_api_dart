@@ -4,14 +4,14 @@ import 'package:br_api/src/data/repository/br_api_repository.dart';
 class CepV2 {
   /// Informações disponíveis.
   CepV2({
-    required this.cep,
-    required this.state,
-    required this.city,
-    required this.neighborhood,
-    required this.street,
-    required this.service,
-    required this.location,
-    required this.errors,
+    this.cep,
+    this.state,
+    this.city,
+    this.neighborhood,
+    this.street,
+    this.service,
+    this.location,
+    this.errors,
   });
 
   /// Obter os dados por um json.
