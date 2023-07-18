@@ -14,7 +14,7 @@ class Cnpj {
     required this.dataSituacaoCadastral,
     required this.motivoSituacaoCadastral,
     required this.nomeCidadeExterior,
-    required this.codigoNaturezaJurifica,
+    required this.codigoNaturezaJuridica,
     required this.dataInicioAtividade,
     required this.cnaeFiscal,
     required this.cnaeFiscalDescricao,
@@ -58,7 +58,7 @@ class Cnpj {
       dataSituacaoCadastral: json['dataSituacaoCadastral'].toString(),
       motivoSituacaoCadastral: json['motivoSituacaoCadastral'] as int?,
       nomeCidadeExterior: json['nomeCidadeExterior'].toString(),
-      codigoNaturezaJurifica: json['codigoNaturezaJurifica'] as int?,
+      codigoNaturezaJuridica: json['codigoNaturezaJuridica'] as int?,
       dataInicioAtividade: json['dataInicioAtividade'].toString(),
       cnaeFiscal: json['cnaeFiscal'] as int?,
       cnaeFiscalDescricao: json['cnaeFiscalDescricao'].toString(),
@@ -95,44 +95,128 @@ class Cnpj {
     );
   }
 
+  /// CNPJ da empresa.
   final String? cnpj;
+
+  /// Código do identificador matriz/filial:
+  /// `1` – MATRIZ
+  /// `2` – FILIAL
   final int? identificadorMatrizFilial;
+
+  /// Descrição matriz/filial.
   final String? descricaoMatrizFilial;
+
+  /// Razão social da empresa.
   final String? razaoSocial;
+
+  /// Nome fantasia da empresa.
   final String? nomeFantasia;
+
+  /// Situação cadastral da empresa:
+  /// `01` – NULA
+  /// `02` – ATIVA
+  /// `03` – SUSPENSA
+  /// `04` – INAPTA
+  /// `08` – BAIXADA
   final int? situacaoCadastral;
+
+  /// Descrição situação cadastral.
   final String? descricaoSituacaoCadastral;
+
+  /// Data da situação cadastral.
   final String? dataSituacaoCadastral;
+
+  /// Código do motivo da situação cadastral.
   final int? motivoSituacaoCadastral;
+
+  /// Nome da cidade no exterior.
   final String? nomeCidadeExterior;
-  final int? codigoNaturezaJurifica;
+
+  /// Código da natureza jurídica
+  final int? codigoNaturezaJuridica;
+
+  /// Data de início das atividades.
   final String? dataInicioAtividade;
+
+  /// CNAE fiscal.
   final int? cnaeFiscal;
+
+  /// Descrição do CNAE fiscal.
   final String? cnaeFiscalDescricao;
+
+  /// Descrição do tipo de logradouro.
   final String? descricaoTipoLogradouro;
+
+  /// Logradouro da empresa.
   final String? logradouro;
+
+  /// Número de contato da empresa.
   final String? numero;
+
+  /// Complemento.
   final String? complemento;
+
+  /// Bairro da empresa.
   final String? bairro;
+
+  /// CEP da empresa.
   final String? cep;
+
+  /// UF da empresa.
   final String? uf;
+
+  /// Código do município da empresa.
   final int? codigoMunicipio;
+
+  /// Município da empresa.
   final String? municipio;
+
+  /// DDD do telefone 1.
   final String? dddTelefone1;
+
+  /// DDD do telefone 2.
   final String? dddTelefone2;
+
+  /// DDD do FAX.
   final String? dddFax;
+
+  /// Qualificação do responsável.
   final int? qualificacaoDoResponsavel;
+
+  /// Capital social da empresa.
   final int? capitalSocial;
+
+  /// Porte da empresa.
   final String? porte;
+
+  /// Descrição do porte.
   final String? descricaoPorte;
+
+  /// Opção pelo simples.
   final bool? opcaoPeloSimples;
+
+  /// Data da opção pelo simples.
   final String? dataOpcaoPeloSimples;
+
+  /// Data da exclusão do simples.
   final String? dataExclusaoDoSimples;
+
+  /// Opção pelo MEI.
   final bool? opcaoPeloMei;
+
+  /// Situação especial.
   final String? situacaoEspecial;
+
+  /// Data da situação especial.
   final String? dataSituacaoEspecial;
+
+  /// CNAEs secundários.
   final List<dynamic>? cnaesSecundarios;
+
+  /// QSA.
   final List<dynamic>? qsa;
+
+  /// Erros encontrados na requisição.
   final Map<String, dynamic>? errors;
 
   static final _brApiRepository = BrApiRepository();
@@ -150,7 +234,7 @@ class Cnpj {
     data['dataSituacaoCadastral'] = dataSituacaoCadastral;
     data['motivoSituacaoCadastral'] = motivoSituacaoCadastral;
     data['nomeCidadeExterior'] = nomeCidadeExterior;
-    data['codigoNaturezaJurifica'] = codigoNaturezaJurifica;
+    data['codigoNaturezaJuridica'] = codigoNaturezaJuridica;
     data['dataInicioAtividade'] = dataInicioAtividade;
     data['cnaeFiscal'] = cnaeFiscal;
     data['cnaeFiscalDescricao'] = cnaeFiscalDescricao;

@@ -25,10 +25,19 @@ class Bank {
     );
   }
 
+  /// IPSB do banco.
   final String? ispb;
+
+  /// Nome do banco.
   final String? name;
+
+  /// Código do banco.
   final int? code;
+
+  /// Nome completo do banco.
   final String? fullName;
+
+  /// Erros encontrados na requisição.
   final Map<String, dynamic>? errors;
 
   static final _brApiRepository = BrApiRepository();

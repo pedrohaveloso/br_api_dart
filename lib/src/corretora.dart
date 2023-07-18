@@ -1,6 +1,6 @@
 import 'package:br_api/src/data/repository/br_api_repository.dart';
 
-/// Informações referentes a Corretoras ativas listadas na CVM.
+/// Informações referentes as corretoras ativas listadas na CVM.
 class Corretora {
   /// Informações disponíveis.
   Corretora({
@@ -52,23 +52,58 @@ class Corretora {
     );
   }
 
+  /// CNPJ da corretora.
   final String? cnpj;
+
+  /// Nome social da corretora.
   final String? nomeSocial;
+
+  /// Nome comercial da corretora.
   final String? nomeComercial;
+
+  /// Bairro registrado da corretora.
   final String? bairro;
+
+  /// CEP registrado da corretora.
   final String? cep;
+
+  /// Código CVM da corretora.
   final String? codigoCvm;
+
+  /// Complementos.
   final String? complemento;
+
+  /// Data de início de atuação da corretora.
   final String? dataInicioAtuacao;
+
+  /// Data de declaração do patrimônio líquido.
   final String? dataPatrimonioLiquido;
+
+  /// Data de registro da corretora.
   final String? dataRegistro;
+
+  /// E-mail da corretora.
   final String? email;
+
+  /// Logradouro da corretora.
   final String? logradouro;
+
+  /// Município da corretora.
   final String? municipio;
+
+  /// País da corretora.
   final String? pais;
+
+  /// Telefone de contato da corretora.
   final String? telefone;
+
+  /// UF da corretora.
   final String? uf;
+
+  /// Valor do patrimônio líquido da corretora.
   final String? valorPatrimonioLiquido;
+
+  /// Erros encontrados na requisição.
   final Map<String, dynamic>? errors;
 
   static final _brApiRepository = BrApiRepository();

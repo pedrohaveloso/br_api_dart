@@ -33,13 +33,28 @@ class CepV2 {
     );
   }
 
+  /// CEP do local.
   final String? cep;
+
+  /// Estado.
   final String? state;
+
+  /// Cidade.
   final String? city;
+
+  /// Bairro.
   final String? neighborhood;
+
+  /// Rua.
   final String? street;
+
+  /// Responsável pelo serviço local.
   final String? service;
+
+  /// Localização.
   final dynamic location;
+
+  /// Erros encontrados na requisição.
   final Map<String, dynamic>? errors;
 
   static final _brApiRepository = BrApiRepository();
