@@ -1,6 +1,6 @@
 import 'package:br_api/src/data/repository/br_api_repository.dart';
 
-/// Informações sobre sistema bancário.
+/// Informações relacionadas a DDDs.
 class Ddd {
   /// Informações disponíveis.
   Ddd({
@@ -21,6 +21,7 @@ class Ddd {
       errors: {
         'message': json['message'],
         'type': json['type'],
+        'name': json['name'],
       },
     );
   }

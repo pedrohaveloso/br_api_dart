@@ -21,6 +21,7 @@ class Feriado {
       errors: {
         'message': json['message'],
         'type': json['type'],
+        'name': json['name'],
       },
     );
   }

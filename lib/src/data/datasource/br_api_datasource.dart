@@ -8,6 +8,7 @@ part 'corretora_datasource.dart';
 part 'cptec_datasource.dart';
 part 'ddd_datasource.dart';
 part 'feriado_datasource.dart';
+part 'fipe_datasource.dart';
 
 /// Realiza a comunicação com a [Brasil API](https://brasilapi.com.br).
 class BrApiDatasource {
@@ -25,4 +26,9 @@ class BrApiDatasource {
   );
   final _dddUrl = 'https://brasilapi.com.br/api/ddd/v1';
   final _feriadosUrl = 'https://brasilapi.com.br/api/feriados/v1';
+  final _fipeUrls = (
+    brands: 'https://brasilapi.com.br/api/fipe/marcas/v1',
+    price: 'https://brasilapi.com.br/api/fipe/preco/v1',
+    tables: 'https://brasilapi.com.br/api/fipe/tabelas/v1',
+  );
 }

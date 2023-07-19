@@ -23,4 +23,7 @@ void main() async {
 
   final feriados = await Feriado.listFeriados(year: 2023);
   print(feriados[2].name);
+
+  final fipe = await Fipe.listBrands(vehicleType: 'carros');
+  print(fipe[11].nome);
 }

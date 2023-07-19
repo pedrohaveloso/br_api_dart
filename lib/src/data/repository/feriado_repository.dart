@@ -1,6 +1,6 @@
 part of 'br_api_repository.dart';
 
-/// Informações relacionadas a DDDs.
+/// Filtragem das informações sobre feriados nacionais.
 extension FeriadoRepository on BrApiRepository {
   /// Filtragem da lista dos feriados nacionais de determinado ano.
   Future<List<Feriado>> filterListFeriados({required int year}) async {

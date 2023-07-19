@@ -1,9 +1,8 @@
 part of 'br_api_repository.dart';
 
-/// Filtragem das informações referentes a CEPs.
+/// Filtragem das informações relacionadas a DDDs.
 extension DddRepository on BrApiRepository {
-  /// Filtragem das informações da busca por CEP com múltiplos providers de
-  /// fallback.
+  /// Filtragem do retorno de estado e lista de cidades por DDD.
   Future<Ddd> filterStatesAndCities({required int ddd}) async {
     final (:body, statusCode: _) = await _brApiDatasource.statesAndCities(
       ddd: ddd,

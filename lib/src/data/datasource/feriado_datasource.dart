@@ -1,6 +1,6 @@
 part of 'br_api_datasource.dart';
 
-/// Informações relacionadas a DDDs.
+/// Informações sobre feriados nacionais.
 extension FeriadoDatasource on BrApiDatasource {
   /// Lista os feriados nacionais de determinado ano.
   ///
