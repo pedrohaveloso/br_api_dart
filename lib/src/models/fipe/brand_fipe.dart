@@ -14,7 +14,7 @@ class BrandFipe {
   factory BrandFipe.fromJson(Map<String, dynamic> json) {
     return BrandFipe(
       name: json['nome'].toString(),
-      value: json['valor'] as num?,
+      value: json['valor'].toString(),
       errors: {
         'name': json['name'],
         'message': json['message'],
@@ -27,7 +27,7 @@ class BrandFipe {
   final String? name;
 
   /// Valor.
-  final num? value;
+  final String? value;
 
   /// Erros encontrados na requisição.
   final Map<String, dynamic>? errors;

@@ -11,7 +11,11 @@ extension FipeRepository on BrApiRepository {
       vehicleType: vehicleType,
     );
 
-    final bodyList = jsonDecode(body) as List;
+    var bodyList = <dynamic>[];
+
+    if (jsonDecode(body) is List) {
+      bodyList = jsonDecode(body) as List;
+    }
 
     return bodyList
         .map(
