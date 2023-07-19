@@ -1,23 +1,21 @@
 import 'package:br_api/src/data/repository/br_api_repository.dart';
 
 /// Informações sobre feriados nacionais.
-class Feriado {
+class Holiday {
   /// Informações disponíveis.
-  Feriado({
+  Holiday({
     this.date,
     this.type,
     this.name,
-    this.fullName,
     this.errors,
   });
 
   /// Obter os dados por um json.
-  factory Feriado.fromJson(Map<String, dynamic> json) {
-    return Feriado(
+  factory Holiday.fromJson(Map<String, dynamic> json) {
+    return Holiday(
       date: json['date'].toString(),
       type: json['type'].toString(),
       name: json['name'].toString(),
-      fullName: json['full_name'].toString(),
       errors: {
         'message': json['message'],
         'type': json['type'],
@@ -35,9 +33,6 @@ class Feriado {
   /// Nome do feriado.
   final String? name;
 
-  /// ...
-  final String? fullName;
-
   /// Erros encontrados na requisição.
   final Map<String, dynamic>? errors;
 
@@ -49,7 +44,6 @@ class Feriado {
     data['date'] = date;
     data['type'] = type;
     data['name'] = name;
-    data['full_name'] = fullName;
     return data;
   }
 
@@ -57,7 +51,7 @@ class Feriado {
   ///
   /// Calcula os feriados móveis baseados na Páscoa e adiciona os feriados
   /// fixos.
-  static Future<List<Feriado>> listFeriados({required int year}) async {
-    return _brApiRepository.filterListFeriados(year: year);
+  static Future<List<Holiday>> listHolidays({required int year}) async {
+    return _brApiRepository.filterListHolidays(year: year);
   }
 }

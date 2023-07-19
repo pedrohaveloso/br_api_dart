@@ -6,8 +6,6 @@ class Ddd {
   Ddd({
     this.state,
     this.cities,
-    this.nome,
-    this.regiao,
     this.errors,
   });
 
@@ -16,8 +14,6 @@ class Ddd {
     return Ddd(
       state: json['state'].toString(),
       cities: json['cities'] as List,
-      nome: json['nome'].toString(),
-      regiao: json['regiao'].toString(),
       errors: {
         'message': json['message'],
         'type': json['type'],
@@ -32,12 +28,6 @@ class Ddd {
   /// Cidades do DDD.
   final List<dynamic>? cities;
 
-  /// Nome.
-  final String? nome;
-
-  /// Região.
-  final Object? regiao;
-
   /// Erros encontrados na requisição.
   final Map<String, dynamic>? errors;
 
@@ -48,8 +38,6 @@ class Ddd {
     final data = <String, dynamic>{};
     data['state'] = state;
     data['cities'] = cities;
-    data['nome'] = nome;
-    data['regiao'] = regiao;
     return data;
   }
 
