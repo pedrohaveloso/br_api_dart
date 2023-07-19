@@ -367,6 +367,22 @@ void main() {
       print('STATUS DO DOMÍNIO: ${domain.publicationStatus}');
       print('EXPIRAÇÃO: ${domain.expiresAt}');
       print('MOTIVOS: ${domain.reasons}');
+      print('-');
+    });
+  });
+
+  group('PIX', () {
+    test('List PIX Participants', () async {
+      final pixParticipants = await Pix.listPixParticipants();
+      for (final participant in pixParticipants) {
+        print('ISPB: ${participant.ispb}');
+        print('NOME: ${participant.name}');
+        print('NOME ENCURTADO: ${participant.shortName}');
+        print('MODO DE PARTICIPAÇÃO: ${participant.participationMode}');
+        print('TIPO DE PARTICIPAÇÃO: ${participant.participationType}');
+        print('DATA INÍCIO DE OPERAÇÃO: ${participant.startOperation}');
+        print('-');
+      }
     });
   });
 }

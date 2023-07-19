@@ -11,6 +11,7 @@ part 'domain_datasource.dart';
 part 'holiday_datasource.dart';
 part 'fipe_datasource.dart';
 part 'ibge_datasource.dart';
+part 'pix_datasource.dart';
 
 /// Realiza a comunicação com a [Brasil API](https://brasilapi.com.br).
 class BrApiDatasource {
@@ -39,4 +40,5 @@ class BrApiDatasource {
     states: 'https://brasilapi.com.br/api/ibge/uf/v1',
   );
   final _domainUrl = 'https://brasilapi.com.br/api/registrobr/v1';
+  final _pixUrl = 'https://brasilapi.com.br/api/pix/v1/participants';
 }
