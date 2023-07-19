@@ -15,6 +15,7 @@ export 'src/models/cptec/ocean_forecast_cptec.dart';
 export 'src/models/cptec/weather_conditions_cptec.dart';
 export 'src/models/cptec/weather_forecast_cptec.dart';
 export 'src/models/ddd.dart';
+export 'src/models/domain.dart';
 export 'src/models/fipe/brand_fipe.dart';
 export 'src/models/fipe/table_fipe.dart';
 export 'src/models/fipe/vehicle_fipe.dart';

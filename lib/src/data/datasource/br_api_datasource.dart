@@ -7,6 +7,7 @@ part 'cnpj_datasource.dart';
 part 'brokerage_datasource.dart';
 part 'cptec_datasource.dart';
 part 'ddd_datasource.dart';
+part 'domain_datasource.dart';
 part 'holiday_datasource.dart';
 part 'fipe_datasource.dart';
 part 'ibge_datasource.dart';
@@ -37,4 +38,5 @@ class BrApiDatasource {
     providers: '?providers=dados-abertos-br,gov,wikipedia',
     states: 'https://brasilapi.com.br/api/ibge/uf/v1',
   );
+  final _domainUrl = 'https://brasilapi.com.br/api/registrobr/v1';
 }

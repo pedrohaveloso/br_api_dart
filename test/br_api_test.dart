@@ -355,4 +355,18 @@ void main() {
       });
     });
   });
+
+  group('Domain', () {
+    test('Search Domain', () async {
+      final domain = await Domain.searchDomain(domain: 'brasilapi.com.br');
+      print('CÓDIGO DE STATUS: ${domain.statusCode}');
+      print('STATUS: ${domain.status}');
+      print('FQDN: ${domain.fqdn}');
+      print('SUGESTÕES: ${domain.suggestions}');
+      print('HOSTS: ${domain.hosts}');
+      print('STATUS DO DOMÍNIO: ${domain.publicationStatus}');
+      print('EXPIRAÇÃO: ${domain.expiresAt}');
+      print('MOTIVOS: ${domain.reasons}');
+    });
+  });
 }
