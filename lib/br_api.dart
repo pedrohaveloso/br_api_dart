@@ -19,3 +19,5 @@ export 'src/models/fipe/brand_fipe.dart';
 export 'src/models/fipe/table_fipe.dart';
 export 'src/models/fipe/vehicle_fipe.dart';
 export 'src/models/holiday.dart';
+export 'src/models/ibge/city_ibge.dart';
+export 'src/models/ibge/state_ibge.dart';

@@ -1,8 +1,6 @@
 // ignore_for_file: avoid_print
 
 import 'package:br_api/br_api.dart';
-import 'package:br_api/src/models/ibge/city_ibge.dart';
-import 'package:br_api/src/models/ibge/state_ibge.dart';
 import 'package:test/test.dart';
 
 void main() {
