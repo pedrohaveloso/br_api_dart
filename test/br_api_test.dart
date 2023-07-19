@@ -1,6 +1,8 @@
 // ignore_for_file: avoid_print
 
 import 'package:br_api/br_api.dart';
+import 'package:br_api/src/models/ibge/city_ibge.dart';
+import 'package:br_api/src/models/ibge/state_ibge.dart';
 import 'package:test/test.dart';
 
 void main() {
@@ -317,6 +319,41 @@ void main() {
           print('${vehicle.dateConsultation}');
           print('-');
         }
+      });
+    });
+  });
+
+  group('IBGE', () {
+    group('City', () {
+      test('List Cities', () async {
+        final cities = await CityIbge.listCities(uf: 'SP');
+        for (final city in cities) {
+          print('NOME: ${city.cityName}');
+          print('CÓDIGO IBGE: ${city.ibgeCode}');
+          print('-');
+        }
+      });
+    });
+
+    group('State', () {
+      test('List States', () async {
+        final states = await StateIbge.listStates();
+        for (final state in states) {
+          print('ID: ${state.id}');
+          print('NOME: ${state.name}');
+          print('REGIÃO: ${state.region}');
+          print('SIGLA: ${state.acronym}');
+          print('-');
+        }
+      });
+
+      test('Search State', () async {
+        final state = await StateIbge.searchState(codeOrUf: 'RJ');
+        print('ID: ${state.id}');
+        print('NOME: ${state.name}');
+        print('REGIÃO: ${state.region}');
+        print('SIGLA: ${state.acronym}');
+        print('-');
       });
     });
   });

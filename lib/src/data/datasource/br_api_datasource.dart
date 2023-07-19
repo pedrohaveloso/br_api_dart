@@ -9,6 +9,7 @@ part 'cptec_datasource.dart';
 part 'ddd_datasource.dart';
 part 'holiday_datasource.dart';
 part 'fipe_datasource.dart';
+part 'ibge_datasource.dart';
 
 /// Realiza a comunicação com a [Brasil API](https://brasilapi.com.br).
 class BrApiDatasource {
@@ -30,5 +31,10 @@ class BrApiDatasource {
     brands: 'https://brasilapi.com.br/api/fipe/marcas/v1',
     price: 'https://brasilapi.com.br/api/fipe/preco/v1',
     tables: 'https://brasilapi.com.br/api/fipe/tabelas/v1',
+  );
+  final _ibgeUrls = (
+    cities: 'https://brasilapi.com.br/api/ibge/municipios/v1',
+    providers: '?providers=dados-abertos-br,gov,wikipedia',
+    states: 'https://brasilapi.com.br/api/ibge/uf/v1',
   );
 }

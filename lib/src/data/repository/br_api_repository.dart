@@ -15,6 +15,8 @@ import 'package:br_api/src/models/fipe/brand_fipe.dart';
 import 'package:br_api/src/models/fipe/table_fipe.dart';
 import 'package:br_api/src/models/fipe/vehicle_fipe.dart';
 import 'package:br_api/src/models/holiday.dart';
+import 'package:br_api/src/models/ibge/city_ibge.dart';
+import 'package:br_api/src/models/ibge/state_ibge.dart';
 
 part 'bank_repository.dart';
 part 'brokerage_repository.dart';
@@ -25,6 +27,7 @@ part 'cptec_repository.dart';
 part 'ddd_repository.dart';
 part 'fipe_repository.dart';
 part 'holiday_repository.dart';
+part 'ibge_repository.dart';
 
 /// Realiza a filtragem dos dados das requisições na API.
 class BrApiRepository {
