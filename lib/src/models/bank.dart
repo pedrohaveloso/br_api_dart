@@ -19,6 +19,7 @@ class Bank {
       code: json['code'] as int?,
       fullName: json['fullName'].toString(),
       errors: {
+        'name': json['name'],
         'message': json['message'],
         'type': json['type'],
       },

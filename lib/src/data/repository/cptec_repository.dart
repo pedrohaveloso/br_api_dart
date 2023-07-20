@@ -6,15 +6,15 @@ part of 'br_api_repository.dart';
 extension CptecRepository on BrApiRepository {
   /// Filtragem das informações da listagem com todas as cidades junto a seus
   /// respectivos códigos presentes nos serviços da CPTEC.
-  Future<List<Cptec>> filterListAllLocations() async {
+  Future<List<CityCptec>> filterListAllLocations() async {
     final (:body, statusCode: _) = await _brApiDatasource.listAllLocations();
 
     final bodyList = jsonDecode(body) as List;
 
     return bodyList
         .map(
-          (corretora) => Cptec.fromJson(
-            corretora as Map<String, dynamic>,
+          (city) => CityCptec.fromJson(
+            city as Map<String, dynamic>,
           ),
         )
         .toList();
@@ -23,7 +23,7 @@ extension CptecRepository on BrApiRepository {
   /// Filtragem da listagem com todas as cidades correspondentes ao termo
   /// pesquisado junto a seus respectivos códigos presentes nos serviços da
   /// CPTEC.
-  Future<List<Cptec>> filterSearchLocations({
+  Future<List<CityCptec>> filterSearchLocations({
     required String cityName,
   }) async {
     final (:body, statusCode: _) = await _brApiDatasource.searchLocations(
@@ -34,8 +34,8 @@ extension CptecRepository on BrApiRepository {
 
     return bodyList
         .map(
-          (corretora) => Cptec.fromJson(
-            corretora as Map<String, dynamic>,
+          (city) => CityCptec.fromJson(
+            city as Map<String, dynamic>,
           ),
         )
         .toList();
@@ -43,15 +43,15 @@ extension CptecRepository on BrApiRepository {
 
   /// Filtragem das informações das condições meteorológicas atuais nas capitais
   /// do país, com base nas estações de solo de seu aeroporto.
-  Future<List<Cptec>> filterCapitalConditions() async {
+  Future<List<WeatherConditionsCptec>> filterCapitalConditions() async {
     final (:body, statusCode: _) = await _brApiDatasource.capitalConditions();
 
     final bodyList = jsonDecode(body) as List;
 
     return bodyList
         .map(
-          (corretora) => Cptec.fromJson(
-            corretora as Map<String, dynamic>,
+          (city) => WeatherConditionsCptec.fromJson(
+            city as Map<String, dynamic>,
           ),
         )
         .toList();
@@ -59,7 +59,7 @@ extension CptecRepository on BrApiRepository {
 
   /// Filtragem das informações condições meteorológicas atuais no aeroporto
   /// solicitado. Esteendpoint utiliza o código ICAO (4 dígitos) do aeroporto.
-  Future<Cptec> filterAirportConditions({
+  Future<WeatherConditionsCptec> filterAirportConditions({
     required String icaoCode,
   }) async {
     final (:body, statusCode: _) = await _brApiDatasource.airportConditions(
@@ -68,11 +68,11 @@ extension CptecRepository on BrApiRepository {
 
     final bodyMap = jsonDecode(body) as Map<String, dynamic>;
 
-    return Cptec.fromJson(bodyMap);
+    return WeatherConditionsCptec.fromJson(bodyMap);
   }
 
   /// Filtragem da previsão meteorológica para 1 dia na cidade informada.
-  Future<Cptec> filterWeatherForecastCity({
+  Future<WeatherForecastCptec> filterWeatherForecastCity({
     required int cityCode,
   }) async {
     final (:body, statusCode: _) = await _brApiDatasource.weatherForecastCity(
@@ -81,12 +81,12 @@ extension CptecRepository on BrApiRepository {
 
     final bodyMap = jsonDecode(body) as Map<String, dynamic>;
 
-    return Cptec.fromJson(bodyMap);
+    return WeatherForecastCptec.fromJson(bodyMap);
   }
 
   /// Filtragem da previsão meteorológica para a cidade informada para um
   /// período de 1 até 6 dias.
-  Future<Cptec> filterWeatherForecastCityDays({
+  Future<WeatherForecastCptec> filterWeatherForecastCityDays({
     required int cityCode,
     required int days,
   }) async {
@@ -98,11 +98,11 @@ extension CptecRepository on BrApiRepository {
 
     final bodyMap = jsonDecode(body) as Map<String, dynamic>;
 
-    return Cptec.fromJson(bodyMap);
+    return WeatherForecastCptec.fromJson(bodyMap);
   }
 
   /// Filtragem da previsão oceânica para a cidade informada para 1 dia.
-  Future<Cptec> filterOceanForecastCity({
+  Future<OceanForecastCptec> filterOceanForecastCity({
     required int cityCode,
   }) async {
     final (:body, statusCode: _) = await _brApiDatasource.oceanForecastCity(
@@ -111,12 +111,12 @@ extension CptecRepository on BrApiRepository {
 
     final bodyMap = jsonDecode(body) as Map<String, dynamic>;
 
-    return Cptec.fromJson(bodyMap);
+    return OceanForecastCptec.fromJson(bodyMap);
   }
 
   /// Fitragem da previsão oceânica para a cidade informada para um período
   /// de até 6 dias.
-  Future<Cptec> filterOceanForecastCityDays({
+  Future<OceanForecastCptec> filterOceanForecastCityDays({
     required int cityCode,
     required int days,
   }) async {
@@ -127,6 +127,6 @@ extension CptecRepository on BrApiRepository {
 
     final bodyMap = jsonDecode(body) as Map<String, dynamic>;
 
-    return Cptec.fromJson(bodyMap);
+    return OceanForecastCptec.fromJson(bodyMap);
   }
 }
