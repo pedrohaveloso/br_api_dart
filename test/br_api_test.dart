@@ -385,4 +385,26 @@ void main() {
       }
     });
   });
+
+  group('Book (ISBN)', () {
+    test('Search book', () async {
+      final book = await Book.searchBook(isbn: '9788545702870');
+      print('ISBN: ${book.isbn}');
+      print('TÍTULO: ${book.title}');
+      print('SUBTÍTULO: ${book.subtitle}');
+      print('AUTORES:${book.authors}');
+      print('EDITORA: ${book.publisher}');
+      print('SINOPSE: ${book.synopsis}');
+      print('DIMENSÕES: ${book.dimensions}');
+      print('ANO: ${book.year}');
+      print('FORMATO: ${book.format}');
+      print('QUANTIDADE DE PÁGINAS: ${book.pageCount}');
+      print('ASSUNTOS: ${book.subjects}');
+      print('LOCALIZAÇÃO: ${book.location}');
+      print('PREÇO DE TABELA: ${book.retailPrice}');
+      print('URL DA CAPA: ${book.coverUrl}');
+      print('PROVEDOR: ${book.provider}');
+      print('-');
+    });
+  });
 }

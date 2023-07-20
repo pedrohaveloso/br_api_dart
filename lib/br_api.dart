@@ -6,6 +6,7 @@
 library br_api;
 
 export 'src/models/bank.dart';
+export 'src/models/book.dart';
 export 'src/models/brokerage.dart';
 export 'src/models/cep_v1.dart';
 export 'src/models/cep_v2.dart';

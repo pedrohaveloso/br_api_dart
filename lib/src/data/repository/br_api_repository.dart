@@ -4,6 +4,7 @@ import 'package:br_api/br_api.dart';
 import 'package:br_api/src/data/datasource/br_api_datasource.dart';
 
 part 'bank_repository.dart';
+part 'book_repository.dart';
 part 'brokerage_repository.dart';
 part 'cep_v1_repository.dart';
 part 'cep_v2_repository.dart';
