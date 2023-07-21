@@ -27,7 +27,7 @@ Ou, no caso de um projeto em Flutter:
 
 ## Usando a biblioteca
 
-A biblioteca conta com todas as funcionalidades disponíveis atualmente na API, para saber mais veja o exemplo de uso na aba [example](https://pub.dev/packages/br_api/example), ou, para informações mais detalhadas, leia a documentação completa: TODO
+A biblioteca conta com todas as funcionalidades disponíveis atualmente na API, para saber mais veja o exemplo de uso na aba [example](https://pub.dev/packages/br_api/example), ou, para informações mais detalhadas, leia a [documentação completa: clique aqui.](https://github.com/PedroHAVeloso/br_api_dart/blob/main/DOCS.md)
 
 Uma consulta simples de CEP:
 
