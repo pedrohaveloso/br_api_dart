@@ -32,6 +32,8 @@ A biblioteca conta com todas as funcionalidades disponíveis atualmente na API, 
 Uma consulta simples de CEP:
 
 ```dart
+import 'package:br_api/br_api.dart';
+
 void main() async {
   // Busca por CEP (versão 2).
   final cep = await CepV2.searchCepV2(cep: 70150900);
