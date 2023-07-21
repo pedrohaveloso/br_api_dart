@@ -15,6 +15,7 @@ part 'domain_repository.dart';
 part 'fipe_repository.dart';
 part 'holiday_repository.dart';
 part 'ibge_repository.dart';
+part 'ncm_repository.dart';
 part 'pix_repository.dart';
 
 /// Realiza a filtragem dos dados das requisições na API.

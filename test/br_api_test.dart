@@ -407,4 +407,46 @@ void main() {
       print('-');
     });
   });
+
+  group('NCM', () {
+    test('All Ncm', () async {
+      final ncms = await Ncm.allNcm();
+      for (var i = 0; i < 5; i++) {
+        print('CÓDIGO NCM: ${ncms[i].code}');
+        print('DESCRIÇÃO: ${ncms[i].desc}');
+        print('DATA DE INICIO: ${ncms[i].startDate}');
+        print('DATA DE FIM: ${ncms[i].endDate}');
+        print('TIPO DE ATO: ${ncms[i].actType}');
+        print('NÚMERO DO ATO: ${ncms[i].actNumber}');
+        print('ANO: ${ncms[i].year}');
+        print('-');
+      }
+    });
+    test('Search Ncms', () async {
+      final ncms = await Ncm.searchNcms(code: '33051000');
+      for (final ncm in ncms) {
+        print('CÓDIGO NCM: ${ncm.code}');
+        print('DESCRIÇÃO: ${ncm.desc}');
+        print('DATA DE INICIO: ${ncm.startDate}');
+        print('DATA DE FIM: ${ncm.endDate}');
+        print('TIPO DE ATO: ${ncm.actType}');
+        print('NÚMERO DO ATO: ${ncm.actNumber}');
+        print('ANO: ${ncm.year}');
+        print('-');
+      }
+    });
+
+    test('Search Ncm', () async {
+      final ncm = await Ncm.searchNcm(code: '33051000');
+
+      print('CÓDIGO NCM: ${ncm.code}');
+      print('DESCRIÇÃO: ${ncm.desc}');
+      print('DATA DE INICIO: ${ncm.startDate}');
+      print('DATA DE FIM: ${ncm.endDate}');
+      print('TIPO DE ATO: ${ncm.actType}');
+      print('NÚMERO DO ATO: ${ncm.actNumber}');
+      print('ANO: ${ncm.year}');
+      print('-');
+    });
+  });
 }
