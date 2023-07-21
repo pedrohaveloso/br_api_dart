@@ -28,7 +28,7 @@ void main() {
 
   group('CEP V1', () {
     test('Search Cep', () async {
-      final cep = await CepV1.searchCepV1(cep: 17500100);
+      final cep = await CepV1.searchCepV1(cep: 70150900);
       print('CEP: ${cep.cep}');
       print('CIDADE: ${cep.city}');
       print('SERVIÇO: ${cep.service}');
@@ -41,7 +41,7 @@ void main() {
 
   group('CEP V2', () {
     test('Search Cep', () async {
-      final cep = await CepV2.searchCepV2(cep: 17500100);
+      final cep = await CepV2.searchCepV2(cep: 70150900);
       print('CEP: ${cep.cep}');
       print('CIDADE: ${cep.city}');
       print('SERVIÇO: ${cep.service}');
@@ -383,6 +383,90 @@ void main() {
         print('DATA INÍCIO DE OPERAÇÃO: ${participant.startOperation}');
         print('-');
       }
+    });
+  });
+
+  group('Book (ISBN)', () {
+    test('Search book', () async {
+      final book = await Book.searchBook(isbn: '9788545702870');
+      print('ISBN: ${book.isbn}');
+      print('TÍTULO: ${book.title}');
+      print('SUBTÍTULO: ${book.subtitle}');
+      print('AUTORES:${book.authors}');
+      print('EDITORA: ${book.publisher}');
+      print('SINOPSE: ${book.synopsis}');
+      print('DIMENSÕES: ${book.dimensions}');
+      print('ANO: ${book.year}');
+      print('FORMATO: ${book.format}');
+      print('QUANTIDADE DE PÁGINAS: ${book.pageCount}');
+      print('ASSUNTOS: ${book.subjects}');
+      print('LOCALIZAÇÃO: ${book.location}');
+      print('PREÇO DE TABELA: ${book.retailPrice}');
+      print('URL DA CAPA: ${book.coverUrl}');
+      print('PROVEDOR: ${book.provider}');
+      print('-');
+    });
+  });
+
+  group('NCM', () {
+    test('All Ncm', () async {
+      final ncms = await Ncm.allNcm();
+      for (var i = 0; i < 5; i++) {
+        print('CÓDIGO NCM: ${ncms[i].code}');
+        print('DESCRIÇÃO: ${ncms[i].desc}');
+        print('DATA DE INICIO: ${ncms[i].startDate}');
+        print('DATA DE FIM: ${ncms[i].endDate}');
+        print('TIPO DE ATO: ${ncms[i].actType}');
+        print('NÚMERO DO ATO: ${ncms[i].actNumber}');
+        print('ANO: ${ncms[i].year}');
+        print('-');
+      }
+    });
+    test('Search Ncms', () async {
+      final ncms = await Ncm.searchNcms(code: '33051000');
+      for (final ncm in ncms) {
+        print('CÓDIGO NCM: ${ncm.code}');
+        print('DESCRIÇÃO: ${ncm.desc}');
+        print('DATA DE INICIO: ${ncm.startDate}');
+        print('DATA DE FIM: ${ncm.endDate}');
+        print('TIPO DE ATO: ${ncm.actType}');
+        print('NÚMERO DO ATO: ${ncm.actNumber}');
+        print('ANO: ${ncm.year}');
+        print('-');
+      }
+    });
+
+    test('Search Ncm', () async {
+      final ncm = await Ncm.searchNcm(code: '33051000');
+
+      print('CÓDIGO NCM: ${ncm.code}');
+      print('DESCRIÇÃO: ${ncm.desc}');
+      print('DATA DE INICIO: ${ncm.startDate}');
+      print('DATA DE FIM: ${ncm.endDate}');
+      print('TIPO DE ATO: ${ncm.actType}');
+      print('NÚMERO DO ATO: ${ncm.actNumber}');
+      print('ANO: ${ncm.year}');
+      print('-');
+    });
+  });
+
+  group('Tax', () {
+    test('All Tax', () async {
+      final tax = await Tax.allTax();
+
+      for (final t in tax) {
+        print('NOME: ${t.name}');
+        print('VALOR: ${t.value}');
+        print('-');
+      }
+    });
+
+    test('Search Tax', () async {
+      final tax = await Tax.searchTax(acronym: 'CDI');
+
+      print('NOME: ${tax.name}');
+      print('VALOR: ${tax.value}');
+      print('-');
     });
   });
 }

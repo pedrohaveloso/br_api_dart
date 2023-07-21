@@ -6,6 +6,7 @@
 library br_api;
 
 export 'src/models/bank.dart';
+export 'src/models/book.dart';
 export 'src/models/brokerage.dart';
 export 'src/models/cep_v1.dart';
 export 'src/models/cep_v2.dart';
@@ -22,4 +23,6 @@ export 'src/models/fipe/vehicle_fipe.dart';
 export 'src/models/holiday.dart';
 export 'src/models/ibge/city_ibge.dart';
 export 'src/models/ibge/state_ibge.dart';
+export 'src/models/ncm.dart';
 export 'src/models/pix.dart';
+export 'src/models/tax.dart';
