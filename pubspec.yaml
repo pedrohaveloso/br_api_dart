@@ -2,7 +2,7 @@ name: br_api
 description: >-
   Package com base na Brasil API. Classes/modelos para uso de suas funcionalidades. 
   Por favor, leia os termos de uso da API.
-version: 1.0.0
+version: 1.0.1
 documentation: https://github.com/PedroHAVeloso/br_api_dart/blob/main/DOCS.md
 repository: https://github.com/PedroHAVeloso/br_api_dart
 homepage: https://github.com/PedroHAVeloso/br_api_dart
