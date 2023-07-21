@@ -58,7 +58,7 @@ class Bank {
     return _brApiRepository.filterAllBankInformation();
   }
 
-  /// Busca as informações de um banco a partir de um código
+  /// Busca as informações de um banco a partir de um código.
   static Future<Bank> searchBankInformation({required int bankCode}) async {
     return _brApiRepository.filterSearchBankInformation(
       bankCode: bankCode,

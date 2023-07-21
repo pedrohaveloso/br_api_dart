@@ -28,7 +28,7 @@ void main() {
 
   group('CEP V1', () {
     test('Search Cep', () async {
-      final cep = await CepV1.searchCepV1(cep: 17500100);
+      final cep = await CepV1.searchCepV1(cep: 70150900);
       print('CEP: ${cep.cep}');
       print('CIDADE: ${cep.city}');
       print('SERVIÇO: ${cep.service}');
@@ -41,7 +41,7 @@ void main() {
 
   group('CEP V2', () {
     test('Search Cep', () async {
-      final cep = await CepV2.searchCepV2(cep: 17500100);
+      final cep = await CepV2.searchCepV2(cep: 70150900);
       print('CEP: ${cep.cep}');
       print('CIDADE: ${cep.city}');
       print('SERVIÇO: ${cep.service}');
