@@ -14,6 +14,7 @@ part 'fipe_datasource.dart';
 part 'ibge_datasource.dart';
 part 'ncm_datasource.dart';
 part 'pix_datasource.dart';
+part 'tax_datasource.dart';
 
 /// Realiza a comunicação com a [Brasil API](https://brasilapi.com.br).
 class BrApiDatasource {
@@ -45,4 +46,5 @@ class BrApiDatasource {
   final _pixUrl = 'https://brasilapi.com.br/api/pix/v1/participants';
   final _bookUrl = 'https://brasilapi.com.br/api/isbn/v1';
   final _ncmUrl = 'https://brasilapi.com.br/api/ncm/v1';
+  final _taxUrl = 'https://brasilapi.com.br/api/taxas/v1';
 }

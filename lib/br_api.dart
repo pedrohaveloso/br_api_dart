@@ -25,3 +25,4 @@ export 'src/models/ibge/city_ibge.dart';
 export 'src/models/ibge/state_ibge.dart';
 export 'src/models/ncm.dart';
 export 'src/models/pix.dart';
+export 'src/models/tax.dart';

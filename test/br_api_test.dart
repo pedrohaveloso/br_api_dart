@@ -449,4 +449,24 @@ void main() {
       print('-');
     });
   });
+
+  group('Tax', () {
+    test('All Tax', () async {
+      final tax = await Tax.allTax();
+
+      for (final t in tax) {
+        print('NOME: ${t.name}');
+        print('VALOR: ${t.value}');
+        print('-');
+      }
+    });
+
+    test('Search Tax', () async {
+      final tax = await Tax.searchTax(acronym: 'CDI');
+
+      print('NOME: ${tax.name}');
+      print('VALOR: ${tax.value}');
+      print('-');
+    });
+  });
 }
