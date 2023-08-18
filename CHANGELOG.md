@@ -2,7 +2,7 @@
 
 Documentação completa da biblioteca lançada no GitHub Pages, através do package [dartdoc](https://pub.dev/packages/dartdoc).
 
-- `DOCS`: documentação completa [(site)](www.pedrohaveloso.site/br_api_dart).
+- `DOCS`: documentação completa [(site)](https://www.pedrohaveloso.site/br_api_dart).
 
 # 1.0.1 - Documentação (Markdown).
 

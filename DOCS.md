@@ -11,6 +11,8 @@ Uma biblioteca em Dart para a API [Brasil API](https://brasilapi.com.br/), com t
 
 Esse arquivo contém a documentação completa da biblioteca, com seus modelos e funções.
 
+### Nova documentação: [https://www.pedrohaveloso.site/br_api_dart](https://www.pedrohaveloso.site/br_api_dart).
+
 ## Documentação
 
 Recursos disponíveis:
