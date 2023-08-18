@@ -1,3 +1,7 @@
+# 1.0.1
+
+- docs: documentação completa
+
 # 1.0.0
 
 Versão inicial da biblioteca.
